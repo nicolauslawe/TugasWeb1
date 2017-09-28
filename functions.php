@@ -34,3 +34,19 @@ function updateUserTable()
 		die("Query failed.");
 	}
 }
+
+function deleteUserTable()
+{
+	global $koneksi;
+	$id			= $_POST['id'];
+	$username 	= $_POST['username'];
+	$password 	= $_POST['password'];
+	
+	$query = "DELETE users WHERE id = $id";
+			
+	$result = mysqli_query($koneksi, $query);
+	
+	id(!$result){
+		die("Query failed.");
+	}
+}
