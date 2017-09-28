@@ -5,8 +5,8 @@
 if(isset($_POST['submit']))
 {
 	$id		= $_POST['id'];
-	$id		= $_POST['username'];
-	$id		= $_POST['password'];
+	$username		= $_POST['username'];
+	$password		= $_POST['password'];
 	
 	$query = "UPDATE users SET username = '$username', password = '$password' WHERE id = $id";
 	$result = mysqli_query($koneksi,$query);
